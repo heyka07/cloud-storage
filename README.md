@@ -1,7 +1,7 @@
 # cloud-storage
 
-NAMA : ZHEWA AL VARIZHY MANEVA
-NIM : 23.83.1012
+NAMA : RAKA TIRTA WAHYUDI
+NIM : 23.83.0991
 
 # Nextcloud Server Setup
 
@@ -126,45 +126,7 @@ Instal Redis di server Redis:
 ```bash
 sudo apt install redis-server -y
 ```
-### 6. Konfigurasi Load Balancer
-Instal Nginx di server load balancer:
-
-```bash
-sudo apt install nginx -y
-```
-Tambahkan konfigurasi berikut untuk meneruskan permintaan ke server aplikasi:
-
-```nginx
-upstream nextcloud_app {
-    server <APPLICATION_SERVER_IP>:80;
-}
-
-server {
-    listen 80;
-    server_name yourdomain.com;
-
-    location / {
-        proxy_pass http://nextcloud_app;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    }
-}
-```
-Aktifkan konfigurasi dan restart Nginx:
-
-```bash
-sudo ln -s /etc/nginx/sites-available/nextcloud /etc/nginx/sites-enabled/
-sudo systemctl restart nginx
-```
-### 7. Finalisasi Konfigurasi Nextcloud
-Akses antarmuka web Nextcloud:
-
-```arduino
-http://<APPLICATION_SERVER_IP>
-```
-Masukkan database server, storage path, dan pengaturan Redis.
-
+DATE 8-10-2024-----------------
 
 
 
