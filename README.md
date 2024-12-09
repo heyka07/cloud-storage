@@ -3,7 +3,7 @@
 NAMA : RAKA TIRTA WAHYUDI
 NIM : 23.83.0991
 
-# Nextcloud Server Setup
+# cloud Server 
 
 ## Layanan Server yang Dibutuhkan
 
