@@ -93,7 +93,7 @@ Buat database dan user untuk Nextcloud:
 
 ```sql
 CREATE DATABASE nextcloud;
-CREATE USER 'zewa'@'varizi' IDENTIFIED BY '12345';
+CREATE USER 'tirta'@'raka' IDENTIFIED BY '12345';
 GRANT ALL PRIVILEGES ON nextcloud.* TO 'nextclouduser'@'%';
 FLUSH PRIVILEGES;
 ```
